@@ -27,6 +27,8 @@ public class loginPageTest {
     
     @Steps
     public myRequestsSteps myRequestsSteps;
+    
+   
 
     @Issue("#WIKI-1")
     @Test

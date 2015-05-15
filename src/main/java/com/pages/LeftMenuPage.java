@@ -24,7 +24,7 @@ public class LeftMenuPage extends PageObject{
 	@FindBy(css="a[href*='menuItem=vacation-tracker]")
 	private WebElementFacade track;
 	
-	public void selectNewVacation(){
+	public void selectNewVacationRequest(){
 		newRequest.click();
 	}
 	
