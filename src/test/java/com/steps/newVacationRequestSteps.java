@@ -12,7 +12,7 @@ NewVacationRequestPage NewVacationRequest;
 
 @Step
 public void selectNewVacationRequest(){
-	leftMenu.selectNewVacationRequest();
+	leftMenu.selectNewVacation();
 }
 /*
 @Step
