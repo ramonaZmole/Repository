@@ -34,4 +34,14 @@ public class myRequestsSteps extends ScenarioSteps {
 	public void selectApplyButton() {
 		myRequests.applyButton();
 	}
+	
+	@Step
+	public void checkIfTypeIsPresent(String typeColumnTitle) {
+		myRequests.checkIfTypeIsPresent(typeColumnTitle);
+	}
+	
+	@Step
+	public void checkIfStatusIsPresent(String statusColumn){
+		myRequests.checkIfStatusIsPresent(statusColumn);
+	}
 }
