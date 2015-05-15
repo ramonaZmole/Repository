@@ -14,10 +14,10 @@ NewVacationRequestPage NewVacationRequest;
 public void selectNewVacationRequest(){
 	leftMenu.selectNewVacationRequest();
 }
-
+/*
 @Step
 public void selectStartDateButton(){
 	NewVacationRequest.selectStartDateButton();
 }
-
+*/
 }
