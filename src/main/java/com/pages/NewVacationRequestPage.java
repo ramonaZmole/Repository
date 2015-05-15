@@ -32,7 +32,7 @@ public class NewVacationRequestPage extends PageObject{
     @FindBy(css="input#_evovacation_WAR_EvoVacationportlet_saveButton")
     private WebElementFacade SaveButton;
     
-    @FindBy(css="input#_evovacation_WAR_EvoVacationportlet_endDate")
+    @FindBy(css="name='endDate' + 'input#_evovacation_WAR_EvoVacationportlet_endDate'")
     private WebElementFacade EndDate;
     
     @FindBy(css="table[class='dp_daypicker'] tbody tr:nth-child(6) td:nth-child(2)")
