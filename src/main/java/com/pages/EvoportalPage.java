@@ -46,5 +46,7 @@ public class EvoportalPage extends PageObject {
     public void selectVacation(){
     	Vacations.click();
     }
-  
+    public void selectVacation1(){
+    	Vacations.click();
+    }
 }
