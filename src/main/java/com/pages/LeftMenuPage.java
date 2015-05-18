@@ -8,19 +8,19 @@ import net.thucydides.core.pages.PageObject;
 @DefaultUrl("http://172.22.4.88:9090/vacation")
 public class LeftMenuPage extends PageObject {
 
-	@FindBy(css = "a[href*='menuItem=new-request']")
+	@FindBy(css = "div ul a[href*='menuItem=new-request']")
 	private WebElementFacade newRequest;
 
-	@FindBy(css = "div ul a[href*='menuItem=my-request']")
+	@FindBy(css = "div ul a[href*='menuItem=my-requests']")
 	private WebElementFacade myRequests;
 
-	@FindBy(css = "a[href*='menuItem=my-free-days]")
+	@FindBy(css = "div ul a[href*='menuItem=my-free-days']")
 	private WebElementFacade myFreeDays;
 
-	@FindBy(css = "a[href*='menuItem=free-days-history]")
+	@FindBy(css = "div ul a[href*='menuItem=free-days-history']")
 	private WebElementFacade freeDaysHistory;
 
-	@FindBy(css = "a[href*='menuItem=vacation-tracker]")
+	@FindBy(css = "div ul a[href*='menuItem=vacation-tracker']")
 	private WebElementFacade track;
 
 	public void selectNewVacation() {

@@ -38,4 +38,5 @@ public class loginPageTest {
 		myRequestsSteps.selectApproved();
 		myRequestsSteps.selectApplyButton();
 	}
+		
 }

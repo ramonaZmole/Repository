@@ -28,8 +28,11 @@ public class myRequestsPage extends PageObject {
 	@FindBy(css = "tr td[class*='col-4']")
 	private List<WebElement> typeColumnElements;
 
-	@FindBy(css = "tr td[class*='col-6']")
+	@FindBy(css = "tr td[class*='col-6'] a")
 	private List<WebElement> statusElement;
+
+	@FindBy(css = "input[value='Withdraw']")
+	private WebElement Withdraw;
 
 	public void applyButton() {
 		apply.click();
@@ -61,13 +64,23 @@ public class myRequestsPage extends PageObject {
 	}
 
 	public void checkIfStatusIsPresent(String status) {
-		boolean found=false;
-		for(WebElement element: statusElement){
-			System.out.println(element.getText().toLowerCase()+ " "+status.toLowerCase());
-			if(!element.getText().toLowerCase().contains(status.toLowerCase())){
-				found=true;
+		boolean found = false;
+		for (WebElement element : statusElement) {
+			System.out.println(element.getText().toLowerCase() + " "
+					+ status.toLowerCase());
+			if (!element.getText().toLowerCase().contains(status.toLowerCase())) {
+				found = true;
 			}
 		}
 		Assert.assertFalse("Another type found", found);
 	}
+
+	public void selectStatus(int x) {
+		statusElement.get(x).click();
+	}
+
+	public void selectWithdraw() {
+		Withdraw.click();
+	}
+
 }
