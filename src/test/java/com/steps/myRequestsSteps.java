@@ -44,4 +44,15 @@ public class myRequestsSteps extends ScenarioSteps {
 	public void checkIfStatusIsPresent(String statusColumn){
 		myRequests.checkIfStatusIsPresent(statusColumn);
 	}
+	
+	@Step
+	public void selectStatus(int x){
+		myRequests.selectStatus(x);
+	}
+	
+	@Step 
+	public void selectWithdraw(){
+		myRequests.selectWithdraw();
+	}
+	
 }
