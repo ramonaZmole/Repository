@@ -40,12 +40,12 @@ public class NewVacationRequestTest {
 		newVacationRequestSteps.selectNewVacationRequest();
 		
 		newVacationRequestSteps.selectStartDate();
-		newVacationRequestSteps.selectStartDate12();
-		newVacationRequestSteps.selectEndDate();
-		newVacationRequestSteps.selectEndDate25();
+	    newVacationRequestSteps.selectStartDate12();
+		//newVacationRequestSteps.selectEndDate();
+		//newVacationRequestSteps.selectEndDate25();
 		
 		
-		newVacationRequestSteps.selectVacationWithoutPaymentButton();
+		/*newVacationRequestSteps.selectVacationWithoutPaymentButton();
 		newVacationRequestSteps.selectDurationAndDomainField();
 		newVacationRequestSteps.selectInstitutionNameField();
 		newVacationRequestSteps.selectSickLeaveButton();
@@ -66,8 +66,8 @@ public class NewVacationRequestTest {
 		newVacationRequestSteps.selectDurationAndDomainField();
 		newVacationRequestSteps.selectInstitutionNameField();
 		newVacationRequestSteps.selectCommentButton();
-		//newVacationRequestSteps.selectCommentField();
+		//newVacationRequestSteps.selectCommentField();*/
 		
-		//newVacationRequestSteps.selectSaveButton();
+		newVacationRequestSteps.selectSaveButton();
     }
 } 
