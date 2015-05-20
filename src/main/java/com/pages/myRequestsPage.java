@@ -34,6 +34,9 @@ public class myRequestsPage extends PageObject {
 	@FindBy(css = "input[value='Withdraw']")
 	private WebElement Withdraw;
 
+	@FindBy(css = "input[type='checkbox'][value='SICK_LEAVE']")
+	private WebElementFacade sickLeave;
+
 	public void applyButton() {
 		apply.click();
 	}
@@ -83,4 +86,17 @@ public class myRequestsPage extends PageObject {
 		Withdraw.click();
 	}
 
+	public void selectSickLeave() {
+		sickLeave.click();
+	}
+
+	public void checkIfPendingSickLeaveAppear(String status) {
+		boolean check = false;
+		for(WebElement element :typeColumnElements){
+			System.out.println(element.getText().toLowerCase() + " "
+					+ status.toLowerCase());
+			Assert.assertTrue("Failure: status is not as expected. Expected: " + status + " Actual: " + element.getText(), element.getText().contains(status));
+		}
+		
+	}
 }

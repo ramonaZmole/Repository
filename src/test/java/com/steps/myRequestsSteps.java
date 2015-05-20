@@ -55,4 +55,17 @@ public class myRequestsSteps extends ScenarioSteps {
 		myRequests.selectWithdraw();
 	}
 	
+	@Step 
+	public void selectSickLeave(){
+		myRequests.selectSickLeave();
+	}
+		
+	@Step
+	public void printStatuses(){
+		myRequests.checkIfPendingSickLeaveAppear("");
+	}
+
+	public void VerifyStatus(String string) {
+		myRequests.checkIfPendingSickLeaveAppear(string);
+	}
 }
