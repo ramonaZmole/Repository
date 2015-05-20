@@ -39,12 +39,10 @@ public class NewVacationRequestTest {
 		endUser.selectVacation();
 		newVacationRequestSteps.selectNewVacationRequest();
 		
-		newVacationRequestSteps.selectStartDate();
-		newVacationRequestSteps.selectStartDate12();
-		newVacationRequestSteps.selectEndDate();
-		newVacationRequestSteps.selectEndDate25();
+		//newVacationRequestSteps.selectStartDate();
+		newVacationRequestSteps.selectSaveButton();
 		
-		
+		/*
 		newVacationRequestSteps.selectVacationWithoutPaymentButton();
 		newVacationRequestSteps.selectDurationAndDomainField();
 		newVacationRequestSteps.selectInstitutionNameField();
@@ -66,6 +64,7 @@ public class NewVacationRequestTest {
 		newVacationRequestSteps.selectDurationAndDomainField();
 		newVacationRequestSteps.selectInstitutionNameField();
 		newVacationRequestSteps.selectCommentButton();
+		*/
 		//newVacationRequestSteps.selectCommentField();
 		
 		//newVacationRequestSteps.selectSaveButton();

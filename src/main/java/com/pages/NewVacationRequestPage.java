@@ -18,10 +18,14 @@ public class NewVacationRequestPage extends PageObject {
 	@FindBy(css = "input#_evovacation_WAR_EvoVacationportlet_saveButton")
 	private WebElementFacade SaveButton;
 
-	@FindBy(css = "input#_evovacation_WAR_EvoVacationportlet_endDate[@name='endDate']")
+	@FindBy(css = "input#_evovacation_WAR_EvoVacationportlet_endDate")
 	private WebElementFacade EndDate;
-
+/*
 	@FindBy(css = "table[class='dp_daypicker'] tbody tr:nth-child(6) td:nth-child(2)")
+	private WebElementFacade EndDate25;
+	*/
+	
+	@FindBy(css = "select[button#aui_3_4_0_1_369]")
 	private WebElementFacade EndDate25;
 
 	@FindBy(css = "div#_evovacation_WAR_EvoVacationportlet_newVacationComment.optionalComment")
