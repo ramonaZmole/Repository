@@ -1,11 +1,53 @@
 package com.pages;
 
+import org.openqa.selenium.WebElement;
+
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 
 public class NewVacationRequestPage extends PageObject {
+	
+	
+	@FindBy(xpath="//*[@class='Zebra_DatePicker_Icon_Wrapper'][1]/button")
+	 private WebElement firstDateButton;
 
+	 @FindBy(css="span[class='Zebra_DatePicker_Icon_Wrapper'] input[name='endDate'] ")
+	 private WebElement secondDateButton;
+	 
+	 @FindBy(css="a[href*='menuItem=new-request']")
+	 private WebElement newVacationRequest;
+	 
+	 @FindBy(css ="input[id='_evovacation_WAR_EvoVacationportlet_type_CS']")
+	 private WebElement specialVacationRadioButton;
+	 
+	 @FindBy(css ="input[id='_evovacation_WAR_EvoVacationportlet_saveButton']")
+	 private WebElementFacade saveButton;
+
+	 
+	 public void press_newVacationRequest() {
+		  element(newVacationRequest).waitUntilVisible();
+		  newVacationRequest.click();
+		 }
+		 
+		 public void press_firstDateButton() {
+		  element(firstDateButton).waitUntilVisible();
+		  firstDateButton.click();
+		 }
+
+		 public void press_secondDateButton() {
+		  secondDateButton.click();
+		 }
+		 
+		 public void click_specialVacationRadioButton() {
+		  specialVacationRadioButton.click();
+		 }
+		 
+		 public void click_save() {
+		  saveButton.click();
+		 }
+	 
+	 
 	@FindBy(css = "a[href='http://172.22.4.88:9090/vacation?p_p_id=evovacation_WAR_EvoVacationportlet&amp']")
 	private WebElementFacade NewVacationRequest;
 
