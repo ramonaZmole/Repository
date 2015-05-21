@@ -5,11 +5,21 @@ import net.thucydides.core.steps.ScenarioSteps;
 
 import com.pages.LeftMenuPage;
 import com.pages.NewVacationRequestPage;
-
+import com.pages.*;
 public class newVacationRequestSteps extends ScenarioSteps {
 	LeftMenuPage leftMenu;
 	NewVacationRequestPage NewVacationRequest;
+	CalendarPage calendar;
 
+	@Step
+	public void setStartDate(int month, int day, int year){
+		NewVacationRequest.press_firstDateButton();
+	}
+	
+	@Step
+	public void setEndDate(int month, int day, int year){
+		NewVacationRequest.press_secondDateButton();
+	}
 	@Step
 	public void selectNewVacationRequest() {
 		leftMenu.selectNewVacation();
