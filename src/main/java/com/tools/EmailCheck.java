@@ -30,7 +30,20 @@ public class EmailCheck {
 			emailFolder.open(Folder.READ_ONLY);
 
 			// retrieve the messages from the folder in an array and print it
-			Message[] messages = emailFolder.getMessages();
+			Message msg = emailFolder.getMessage(emailFolder.getMessageCount());
+			Address[] in = msg.getFrom();
+			
+			for (Address address : in) {
+				System.out.println("FROM:" + address.toString());
+			}
+
+			String email = (String) msg.getContent();
+
+			System.out.println("SENT DATE:" + msg.getSentDate());
+			System.out.println("SUBJECT:" + msg.getSubject());
+			System.out.println("CONTENT:" + msg.getContent());
+			
+		/*	Message[] messages = emailFolder.getMessages();
 			Message unread[] = emailFolder.search(new FlagTerm(new Flags(
 					Flag.SEEN), false));
 
@@ -42,7 +55,7 @@ public class EmailCheck {
 
 			System.out.println("messages.length---" + unread.length);
 
-			for (int i = 0, n = unread.length; i <n; i++) {
+			for (int i = 0, n = unread.length; i < n; i++) {
 				Message message = unread[i];
 				System.out.println("---------------------------------");
 				// System.out.println("Email Number " + (i + 1));
@@ -51,7 +64,14 @@ public class EmailCheck {
 				System.out.println("Text: " + message.getContent().toString());
 
 			}
-
+*/
+           
+            email = email.replace("\r\n", "");
+            
+            //String expectedEmail = "Dear " + firstName +",<br /> <br />   ";
+           // expectedEmail = expectedEmail + "You have submitted a new Vacation Request. Your holiday interval is: <strong>28/10/2015 - 30/10/2015</strong>.  <br />     Please check if the request was approved before going on holiday, if not please contact your vacation approver, <b>Alexandra Pandele</b>.   <!-- <br/> <br/> Cheers, <br /> The EvoPortal Team--><br/> <br/> Cheers, <br /> The EvoPortal Team";
+            String expectedEmail2 = "Dear __firstNme__,<br /> <br />   You have submitted a new Vacation Request. Your holiday interval is: <strong>28/10/2015 - 30/10/2015</strong>.  <br />     Please check if the request was approved before going on holiday, if not please contact your vacation approver, <b>Alexandra Pandele</b>.   <!-- <br/> <br/> Cheers, <br /> The EvoPortal Team--><br/> <br/> Cheers, <br /> The EvoPortal Team";
+           // expectedEmail2 = expectedEmail2.replace("__firstNme__", firstName);
 			// close the store and folder objects
 			emailFolder.close(false);
 			store.close();
